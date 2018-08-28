@@ -1,3 +1,3 @@
 # Simon-Says
 
-bitballoon: https://epic-volhard-7debaf.netlify.com/
+netlify: https://unruffled-keller-0ffbfe.netlify.com/
