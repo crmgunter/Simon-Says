@@ -21,11 +21,9 @@ $(".player-button").click(function() {
   setTimeout(() => {
       $(this).css('opacity', '1')
   }, 300)
-  if (playerChoice.length === memory.length) {
     setTimeout(() => {
         compareTwoArrays();
     }, 800)    
-  }
 });
 
 const shine = () => {
@@ -54,7 +52,7 @@ const compareTwoArrays = () => {
         <button onClick="location.reload()">Play again?</button>`);
     }
   });
-  if ((checker = true)) {
+  if (checker === true && playerChoice.length === memory.length) {
     playerChoice = [];
     computerTurn();
   }
