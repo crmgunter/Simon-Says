@@ -1,0 +1,40 @@
+
+body {
+    margin: 0;
+}
+
+.none {
+    display: none;
+}
+
+.game-board {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.button {
+    margin: auto;
+}
+
+.red {
+    background: red;
+    height: 40vh;
+    width: 50vw;
+}
+.blue {
+    background: blue;
+    height: 40vh;
+    width: 50vw;
+}
+.green {
+    background: green;
+    height: 40vh;
+    width: 50vw;
+}
+.yellow {
+    background: yellow;
+    height: 40vh;
+    width: 50vw;
+}
