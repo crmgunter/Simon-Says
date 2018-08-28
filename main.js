@@ -1,13 +1,5 @@
 const memory = [];
 let playerChoice = [];
-let checker = false;
-
-const computerTurn = () => {
-  const random = Math.floor(Math.random() * 4 + 1);
-  memory.push(random);
-  console.log(memory);
-  shine()
-};
 
 $('button').click(() => {
     computerTurn()
@@ -15,16 +7,19 @@ $('button').click(() => {
 })
 
 $(".player-button").click(function() {
-    console.log($(this).attr("id"))
   playerChoice.push(parseInt($(this).attr("id")));
   $(this).css('opacity', '.3')
   setTimeout(() => {
       $(this).css('opacity', '1')
   }, 300)
-    setTimeout(() => {
-        compareTwoArrays();
-    }, 800)    
+        compareTwoArrays(); 
 });
+
+const computerTurn = () => {
+    const random = Math.floor(Math.random() * 4 + 1);
+    memory.push(random);
+    shine()
+  };
 
 const shine = () => {
     memory.forEach((square, index) => {
@@ -46,14 +41,16 @@ const styleChosenSquares = (choice) => {
 const compareTwoArrays = () => {
   playerChoice.forEach((arr1, i) => {
     if (arr1 === memory[i]) {
-      checker = true;
+      return;
     } else {
       $("body").html(`<div>YOU LOSE</div>
         <button onClick="location.reload()">Play again?</button>`);
     }
   });
-  if (checker === true && playerChoice.length === memory.length) {
-    playerChoice = [];
+  if (playerChoice.length === memory.length) {
+    setTimeout(() => {
+        playerChoice = [];
     computerTurn();
+    }, 1000)
   }
 };
