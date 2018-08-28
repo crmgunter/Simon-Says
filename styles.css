@@ -20,7 +20,7 @@ body {
     height: 40vh;
     width: 40vw;
 }
-.red, .blue, .green, .yello {
+.red {
     background: red;
 }
 .blue {
